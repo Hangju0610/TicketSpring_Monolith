@@ -3,6 +3,7 @@
 TicketSpring의 최상위 System Context 다이어그램입니다. 고객, 관리자(주최자), 결제 대행사(PG)와 TicketSpring 시스템 간의 관계를 나타냅니다.
 
 ```mermaid
+%%{init: {"theme": "default", "themeVariables": {"background": "#ffffff"}, "c4": {"c4ShapeMargin": 110, "c4ShapePadding": 20}} }%%
 C4Context
   title System Context diagram for TicketSpring
 
@@ -16,9 +17,9 @@ C4Context
   Rel(admin, ticketSpring, "공연·좌석·일정 등록/관리")
   BiRel(ticketSpring, pg, "결제 요청 / 승인·실패 통지")
 
-  UpdateRelStyle(customer, ticketSpring, $offsetY="-30")
-  UpdateRelStyle(admin, ticketSpring, $offsetY="20", $offsetX="-30")
-  UpdateRelStyle(ticketSpring, pg, $offsetX="20")
+  UpdateRelStyle(customer, ticketSpring, $offsetX="-130", $offsetY="-40", $textColor="#333333", $lineColor="#666666")
+  UpdateRelStyle(admin, ticketSpring, $offsetY="-40", $textColor="#333333", $lineColor="#666666")
+  UpdateRelStyle(ticketSpring, pg, $offsetX="0", $offsetY="0", $textColor="#333333", $lineColor="#666666")
 
   UpdateLayoutConfig($c4ShapeInRow="3", $c4BoundaryInRow="1")
 ```
